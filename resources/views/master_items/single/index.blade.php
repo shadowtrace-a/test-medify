@@ -13,6 +13,16 @@
                 <div class="card-body">
                     <table>
                         <tr>
+                            <th width="30%">Foto</th>
+                            <td>
+                                @if(!empty($data->foto))
+                                <img src="{{ asset('images/' . $data->foto) }}" alt="Foto Item" width="150" class="rounded">
+                                @else
+                                <span class="text-muted">Tidak ada foto</span>
+                                @endif
+                            </td>
+                        </tr>
+                        <tr>
                             <th>Nama</th>
                             <td>:</td>
                             <td>{{$data->nama}}</td>
